@@ -13,9 +13,9 @@
   else
   { $n = mysqli_real_escape_string( $link, trim( $_POST[ 'item_name' ] ) ) ; }
 
-  # Check for a item decription.
+  # Check for a item description.
   if (empty( $_POST[ 'item_desc' ] ) )
-  { $errors[] = 'Enter the item decription.' ; }
+  { $errors[] = 'Enter the item description.' ; }
   else
   { $d = mysqli_real_escape_string( $link, trim( $_POST[ 'item_desc' ] ) ) ; }
   
@@ -27,7 +27,7 @@
   
   # Check for a item price.
   if (empty( $_POST[ 'item_price' ] ) )
-  { $errors[] = 'Enter the item image.' ; }
+  { $errors[] = 'Enter the item price.' ; }
   else
   { $p = mysqli_real_escape_string( $link, trim( $_POST[ 'item_price' ] ) ) ; }
 

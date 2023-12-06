@@ -9,38 +9,38 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   $errors = array();
 
 # Check for id.
-  if ( empty( $_POST[ 'id' ] ) )
+  if ( empty( $_POST[ 'item_id' ] ) )
   { $errors[] = '' ; }
   else
-  { $id = mysqli_real_escape_string( $link, trim( $_POST[ 'id' ] ) ) ; }
+  { $id = mysqli_real_escape_string( $link, trim( $_POST[ 'item_id' ] ) ) ; }
   
   # Check for name.
-  if ( empty( $_POST[ 'name' ] ) )
+  if ( empty( $_POST[ 'item_name' ] ) )
   { $errors[] = 'Update name.' ; }
   else
-  { $n = mysqli_real_escape_string( $link, trim( $_POST[ 'name' ] ) ) ; }
+  { $n = mysqli_real_escape_string( $link, trim( $_POST[ 'item_name' ] ) ) ; }
 
   # Check for description
-  if (empty( $_POST[ 'description' ] ) )
+  if (empty( $_POST[ 'item_desc' ] ) )
   { $errors[] = 'Update description.' ; }
   else
-  { $d = mysqli_real_escape_string( $link, trim( $_POST[ 'description' ] ) ) ; }
+  { $d = mysqli_real_escape_string( $link, trim( $_POST[ 'item_desc' ] ) ) ; }
 
 # Check for image URL.
-  if (empty( $_POST[ 'imageURL' ] ) )
+  if (empty( $_POST[ 'item_img' ] ) )
   { $errors[] = 'Update image URL.' ; }
   else
-  { $i = mysqli_real_escape_string( $link, trim( $_POST[ 'imageURL' ] ) ) ; }
+  { $i = mysqli_real_escape_string( $link, trim( $_POST[ 'item_img' ] ) ) ; }
 
 # Check for price.
-  if (empty( $_POST[ 'price' ] ) )
+  if (empty( $_POST[ 'item_price' ] ) )
   { $errors[] = 'Update price.' ; }
   else
-  { $p = mysqli_real_escape_string( $link, trim( $_POST[ 'price' ] ) ) ; }
+  { $p = mysqli_real_escape_string( $link, trim( $_POST[ 'item_price' ] ) ) ; }
   
   # Update the record in the database
   {
-    $sql = "UPDATE users SET id=$id, name='$n', description='$d', imageURL='$i', price='$p' WHERE id='$id'";
+    $sql = "UPDATE users SET item_id=$id, item_name='$n', item_desc='$d', item_img='$i', item_price='$p' WHERE item_id='$id'";
     $r = @mysqli_query ( $link, $sql ) ;
     if ($r)
     {
