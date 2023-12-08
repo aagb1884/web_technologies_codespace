@@ -39,7 +39,7 @@ td {
         while($row = mysqli_fetch_array($r,MYSQLI_ASSOC))
 			{
 			echo'<tr>
-			<td>'.$row['item_id'].' </td><td>'.$row['item_name'].' </td><td>'.$row['item_desc'].'</td><td><img src="'.$row['item_img'].'" alt="product" width="50"   height="50"></td><td>'.$row['item_price'].'</td><td><a href="delete.php">Delete  | </a> <a href="update.php">Update</a></td>
+			<td>'.$row['item_id'].' </td><td>'.$row['item_name'].' </td><td>'.$row['item_desc'].'</td><td><img src="'.$row['item_img'].'" alt="product" width="50"   height="50"></td><td>'.$row['item_price'].'</td><td><a href="delete.php?id='.$row['item_id'].'">Delete  | </a> <a href="update.php">Update</a></td>
 				</tr>
 			';
 }
