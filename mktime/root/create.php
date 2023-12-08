@@ -40,7 +40,7 @@
     $r = @mysqli_query ( $link, $q ) ;
     if ($r)
     { echo '<p>New record created successfully</p>
-		<a href="create_record.php">Add Records</a>  |  <a href="read.php">Read Records</a>  |  <a href="update_record.php?id='.$row['product_id'].'">Update Record</a>  | <a href="delete_record.php?id='.$row['product_id'].'">Delete Record</a>'; }
+		<a href="create_record.php">Add Records</a>  |  <a href="read.php">Read Records</a>  |  <a href="update_record.php?id='.$row['product_id'].'">Update Record</a>  | <a href="delete_record.php?id='.$row['product_id'].'">Delete Record</a>; }
   
     # Close database connection.
     mysqli_close($link); 
