@@ -1,7 +1,7 @@
 <?php
 include "connect_db.php";
 
-$sql = "SELECT item_id, item_name, item_desc, item_img, item_price FROM products";
+$sql = "SELECT * FROM products";
 $r = @mysqli_query ( $link, $sql ) ;
     if ( mysqli_num_rows( $r ) != 0 ) 
 
@@ -39,7 +39,7 @@ td {
         while($row = mysqli_fetch_array($r,MYSQLI_ASSOC))
 			{
 			echo'<tr>
-			<td>'.$row['item_id'].' </td><td>'.$row['item_name'].' </td><td>'.$row['item_desc'].'</td><td>'.$row['item_img'].'</td><td>'.$row['item_price'].'</td><td><a href="delete.php">Delete  | </a> <a href="update.php">Update</a></td>
+			<td>'.$row['item_id'].' </td><td>'.$row['item_name'].' </td><td>'.$row['item_desc'].'</td><td><img src="'.$row['item_img'].'" alt="product" width="50"   height="50"></td><td>'.$row['item_price'].'</td><td><a href="delete.php">Delete  | </a> <a href="update.php">Update</a></td>
 				</tr>
 			';
 }
