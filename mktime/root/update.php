@@ -49,7 +49,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
         echo "Error updating record: " . $link->error;
     }
   
-    # Close database connection.
+       # Close database connection.
     
 	mysqli_close($link); 
     exit();
@@ -67,14 +67,15 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
     { echo "$msg " ; }
     echo 'Please try again.")</script>';
   } 
-  
 ?>
 
 <!doctype html>
 <html lang="en">
+
   <head>
-<title> CRUD Practice!</title>
+<title>Update Product</title>
   </head>
+  
   <body>
 <form action="update.php" method="post">
   <label for="product_id">Update product ID</label>
@@ -95,11 +96,9 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   <input type="submit" value="Update Record"></p>
 </form><!-- closing form -->
  <br>
- 		<a href="create_record.php">Add Records</a>  |  <a href="read.php">Read Records</a>  |  <a href="update_record.php?id='.$row['product_id'].'">Update Record</a>  | <a href="delete_record.php?id='.$row['product_id'].'">Delete Record</a>; }
+ 		<a href="create.php">Add Records</a>  |  <a href="read.php">Read Records</a>  |  <a href="update.php?id='.$row['product_id'].'">Update Record</a>  | <a href="delete.php?id='.$row['product_id'].'">Delete Record</a>
 
   </body>
 </html>
-<br>
 
-</body>
-</html>
+
