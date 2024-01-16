@@ -94,11 +94,10 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   <input type="text" name="product_price" value="<?php if (isset($_POST['product_price'])) echo $_POST['product_price']; ?>">
  <br>
   <input type="submit" value="Update Record"></p>
-</form><!-- closing form -->
+</form>
+<!-- closing form -->
  <br>
  		<a href="create.php">Add Records</a>  |  <a href="read.php">Read Records</a>  |  <a href="update.php?id='.$row['product_id'].'">Update Record</a>  | <a href="delete.php?id='.$row['product_id'].'">Delete Record</a>
 
   </body>
 </html>
-
-

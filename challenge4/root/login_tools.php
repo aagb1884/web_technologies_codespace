@@ -34,7 +34,7 @@ function validate( $link, $email = '', $pwd = '')
   # On success retrieve user_id, first_name, and last name from 'users' database.
   if ( empty( $errors ) ) 
   {
-    $q = "SELECT user_id, first_name, last_name FROM users WHERE email='$e' AND password=SHA2 ('$p', 256)" ;  
+    $q = "SELECT user_id, first_name, last_name FROM users WHERE email='$e' AND password='$p'" ; 
     $r = mysqli_query ( $link, $q ) ;
     if ( @mysqli_num_rows( $r ) == 1 ) 
     {
